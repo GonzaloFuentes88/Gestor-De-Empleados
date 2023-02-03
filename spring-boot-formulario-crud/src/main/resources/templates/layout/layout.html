@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title th:text="${titulo}"></title>
+
+<!-- Custom fonts for this template-->
+<link th:href="@{/vendor/fontawesome-free/css/all.min.css}"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+	
+
+<!-- Custom styles for this template-->
+<link th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet">
+</head>
+<body>
+	<!-- Sidebar -->
+	<ul th:fragment="sidebar"
+		class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+		id="accordionSidebar">
+
+		<!-- Sidebar - Brand -->
+		<a
+			class="sidebar-brand d-flex align-items-center justify-content-center"
+			th:href="@{/index}">
+			<div class="sidebar-brand-icon rotate-n-15">
+				<i class="fas fa-laugh-wink"></i>
+			</div>
+			<div class="sidebar-brand-text mx-3" th:text="${titulo}"></div>
+		</a>
+
+		<!-- Divider -->
+		<hr class="sidebar-divider my-0">
+
+		<!-- Nav Item - Dashboard -->
+		<li class="nav-item"><a class="nav-link"
+			th:href="@{/index}"> <i class="fas fa-fw fa-tachometer-alt"></i>
+				<span>Estadisticas</span></a></li>
+		
+		<li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Empleados</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" th:href="@{/tables}">Listar Empleados</a>
+                        <a class="collapse-item" th:href="@{/add}">Agregar Empleados</a>
+                    </div>
+                </div>
+            </li>
+
+
+		<!-- Divider -->
+		<hr class="sidebar-divider d-none d-md-block">
+
+		<!-- Sidebar Toggler (Sidebar) -->
+		<div class="text-center d-none d-md-inline">
+			<button class="rounded-circle border-0" id="sidebarToggle"></button>
+		</div>
+
+	</ul>
+	<!-- End of Sidebar -->
+
+	<!-- Topbar -->
+	<nav th:fragment="topbar"
+		class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+		<!-- Sidebar Toggle (Topbar) -->
+		
+		<h1 class="h3 mb-0 text-gray-800" th:text="${tituloSeccion}"></h1>
+				<!-- <a href="#"
+							class="d-flex d-sm-inline-block ml-auto btn btn-sm btn-primary shadow-sm"><i
+							class="fas fa-download fa-sm text-white-50"></i> Generar Reporte</a>
+					<div
+						class="d-sm-flex align-items-rigth justify-content-between mb-4">
+									
+						
+					</div>
+ 			-->
+
+	</nav>
+	<!-- End of Topbar -->
+
+	<footer th:fragment="footer" class="sticky-footer bg-white">
+		<!-- Footer -->
+
+		<div class="container my-auto">
+			<div class="copyright text-center my-auto">
+				<span>Copyright &copy; Your Website 2021</span>
+			</div>
+		</div>
+	</footer>
+	<div th:fragment="scripts">
+		<!-- Bootstrap core JavaScript-->
+		<script th:src="@{/vendor/jquery/jquery.min}"></script>
+		<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min}"></script>
+
+		<!-- Core plugin JavaScript-->
+		<script th:src="@{/vendor/jquery-easing/jquery.easing.min}"></script>
+
+		<!-- Custom scripts for all pages-->
+		<script th:src="@{/js/sb-admin-2.min}"></script>
+
+		<!-- Page level plugins -->
+		<script th:src="@{/vendor/chart.js/Chart.min}"></script>
+
+		<!-- Page level custom scripts -->
+		<script th:src="@{/js/demo/chart-area-demo}"></script>
+		<script th:src="@{/js/demo/chart-pie-demo}"></script>
+
+	</div>
+
+</body>
+</html>
