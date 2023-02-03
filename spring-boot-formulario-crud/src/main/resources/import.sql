@@ -1,4 +1,3 @@
-INSERT INTO empleados (dni,nombre,apellido,fecha_nacimiento,email,celular,sueldo) VALUES ('44393222','Gonzalo','Fuentes','2002-06-29','fuentesgonzalo88@gmail.com','1154550459',90000)
 INSERT INTO empleados (dni,nombre,apellido,fecha_nacimiento,email,celular,sueldo) VALUES ('42323232','Jorge','Rodriguez','2002-06-29','fuentesgonzalo88@gmail.com','1154550459',100000)
 INSERT INTO empleados (dni,nombre,apellido,fecha_nacimiento,email,celular,sueldo) VALUES ('34242424','Emanuel','Martinez','2002-06-29','fuentesgonzalo88@gmail.com','1154550459',70000)
 INSERT INTO empleados (dni,nombre,apellido,fecha_nacimiento,email,celular,sueldo) VALUES ('43422321','Carlos','Perez','2002-06-29','fuentesgonzalo88@gmail.com','1154550459',78000)
